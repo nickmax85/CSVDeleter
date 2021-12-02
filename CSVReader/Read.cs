@@ -31,7 +31,8 @@ namespace CSVReader
                 //    Debug.WriteLine(item.SM_OefWert);
                 //}
 
-                using (var writer = new StreamWriter(path + @"\newFile.csv"))
+               
+                using (var writer = new StreamWriter(path + @"\" + Path.GetFileName(file) + "_NEW.csv"))
                 using (var item = new CsvWriter(writer, CultureInfo.CurrentCulture))
                 {
                     item.WriteRecords(records);
